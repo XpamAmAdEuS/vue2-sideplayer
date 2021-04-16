@@ -1,4 +1,4 @@
-import SidePlayer from '@/SidePlayer.vue'
+import SidePlayer from './SidePlayer.vue'
 import { VueConstructor } from 'vue'
 
 

@@ -54,27 +54,27 @@ export default class SidePlugin {
     this.wavesurfer = ws;
     this.util = ws.util;
     this.params = Object.assign(
-      {},
-      {
-        height: 20,
-        notchPercentHeight: 90,
-        labelPadding: 5,
-        unlabeledNotchColor: '#c0c0c0',
-        primaryColor: '#000',
-        secondaryColor: '#c0c0c0',
-        primaryFontColor: '#000',
-        secondaryFontColor: '#000',
-        fontFamily: 'Arial',
-        fontSize: 10,
-        duration: null,
-        zoomDebounce: false,
-        formatTimeCallback: this.defaultFormatTimeCallback,
-        timeInterval: this.defaultTimeInterval,
-        primaryLabelInterval: this.defaultPrimaryLabelInterval,
-        secondaryLabelInterval: this.defaultSecondaryLabelInterval,
-        offset: 0,
-      },
-      params
+        {},
+        {
+          height: 20,
+          notchPercentHeight: 90,
+          labelPadding: 5,
+          unlabeledNotchColor: '#c0c0c0',
+          primaryColor: '#000',
+          secondaryColor: '#c0c0c0',
+          primaryFontColor: '#000',
+          secondaryFontColor: '#000',
+          fontFamily: 'Arial',
+          fontSize: 10,
+          duration: null,
+          zoomDebounce: false,
+          formatTimeCallback: this.defaultFormatTimeCallback,
+          timeInterval: this.defaultTimeInterval,
+          primaryLabelInterval: this.defaultPrimaryLabelInterval,
+          secondaryLabelInterval: this.defaultSecondaryLabelInterval,
+          offset: 0,
+        },
+        params
     );
 
     this.wrapper = null;
@@ -90,8 +90,8 @@ export default class SidePlugin {
      * @returns {void}
      */
     this._onZoom = this.params.zoomDebounce
-      ? this.wavesurfer.util.debounce(() => this.render(), this.params.zoomDebounce)
-      : () => this.render();
+        ? this.wavesurfer.util.debounce(() => this.render(), this.params.zoomDebounce)
+        : () => this.render();
   }
 
   /**

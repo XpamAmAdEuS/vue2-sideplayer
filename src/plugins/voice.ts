@@ -10,10 +10,13 @@ export default class VoicePlugin {
 
   _onRedraw = () => this.render();
 
+  _onPlay = () => this.setVol();
+
   _onReady = () => {
     const ws = this.wavesurfer;
     this.util = ws.util;
     ws.on('redraw', this._onRedraw);
+    ws.on('play', this._onPlay);
     this.render();
   };
 
@@ -27,6 +30,7 @@ export default class VoicePlugin {
     this.wavesurfer = ws;
     this.util = ws.util;
     this.wrapper = null;
+    this.params = params;
   }
 
   init() {
@@ -62,7 +66,9 @@ export default class VoicePlugin {
     this.wrapper.min = '0';
     this.wrapper.max = '1';
     this.wrapper.step = '0.01';
-    this.wrapper.value = this.wavesurfer.getVolume();
+    this.wrapper.value = this.params.volume
+    this.wavesurfer.setVolume(this.params.volume);
+
   }
 
   bindChange() {
@@ -72,7 +78,12 @@ export default class VoicePlugin {
     this.container.addEventListener('change', this._onChange);
   }
 
+  setVol() {
+    this.wavesurfer.setVolume(this.wrapper.value)
+  }
+
   render() {
+    //this.wavesurfer.setVolume(this.params.volume)
     if (!this.wrapper) {
       this.createWrapper();
     }
