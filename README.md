@@ -8,5 +8,4 @@ Can be used in any project without bootstrap.
 Just change all imports from "@vue/composition-api" to "vue"
 
 
-
-![Alt text](Screenshot from 2021-04-16 23-43-23.png?raw=true "Example using bootstrap vue table to control")
+![Image](../Screenshot from 2021-04-16 23-43-23.png?raw=true)
