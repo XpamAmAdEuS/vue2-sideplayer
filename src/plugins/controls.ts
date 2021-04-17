@@ -1,3 +1,4 @@
+// @ts-nocheck
 export default class ControlsPlugin {
   static create(params) {
     return {
@@ -15,6 +16,7 @@ export default class ControlsPlugin {
   _onPlay = () => this.updatePlaying();
 
   _onReady = () => {
+    // @ts-ignore
     const ws = this.wavesurfer;
     ws.on('redraw', this._onRedraw);
     ws.on('pause', this._onPause);
@@ -23,6 +25,7 @@ export default class ControlsPlugin {
   };
 
   constructor(params, ws) {
+
     this.container = 'string' == typeof params.container ? document.querySelector(params.container) : params.container;
 
     if (!this.container) {
