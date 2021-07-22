@@ -1,7 +1,7 @@
 {
   "name": "vue2-sideplayer",
   "private": false,
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Vue2/3 Wavesurfer player",
   "author": "Miljenko Halapir",
   "scripts": {
@@ -21,24 +21,24 @@
   ],
   "style": "dist/index.css",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-commonjs": "^19.0.1",
     "@types/vue": "^2.0.0",
-    "@types/wavesurfer.js": "^3.3.2",
-    "@vue/composition-api": "^1.0.0-rc.6",
+    "@types/wavesurfer.js": "^5.1.0",
+    "@vue/composition-api": "^1.0.3",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
-    "postcss": "^8.2.10",
-    "rollup": "^2.45.2",
+    "postcss": "^8.3.6",
+    "rollup": "^2.53.3",
     "rollup-plugin-filesize": "^9.1.1",
     "rollup-plugin-sass": "^1.2.2",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-vue": "^5.1.9",
-    "sass": "^1.32.10",
-    "typescript": "~4.2.4",
-    "vue": "^2.6.12",
-    "vue-template-compiler": "^2.6.12",
-    "wavesurfer.js": "^4.6.0"
+    "sass": "^1.35.2",
+    "typescript": "~4.3.5",
+    "vue": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "wavesurfer.js": "^5.1.0"
   },
   "bugs": {
     "url": "https://github.com/XpamAmAdEuS/vue2-sideplayer/issues"

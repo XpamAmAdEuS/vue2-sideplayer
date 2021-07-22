@@ -54,8 +54,8 @@ import {
   reactive,
   ref,
 } from "@vue/composition-api";
-import WaveSurfer, { WaveSurferParams } from "wavesurfer.js";
-
+import WaveSurfer from "wavesurfer.js";
+import WaveSurferParams  from "wavesurfer.js";
 import CursorPlugin from "./plugins/cursor";
 import SidePlugin from "./plugins/side";
 import ControlsPlugin from "./plugins/controls";
@@ -183,6 +183,8 @@ export default defineComponent({
         },
       },
       volume: props.volume,
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       waveSurfer: { type: WaveSurfer, default: () => new WaveSurfer(params) },
     });
 
